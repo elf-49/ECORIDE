@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="./scss/css/main.css">
     <title>Document</title>
 </head>
+
+
 <body>
+  <!--background: #E8DCCA;-->
 
 <!--
 <header>Le menu du site ECORIDE <i class="bi bi-airplane"></i></header>
@@ -27,7 +30,9 @@
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
 
           <div class="container-fluid">
+              <img src="/images/logo4.png"  height="60px" alt="le logo">  
               <a class="navbar-brand" href="/">ECORIDE</a>
+              
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -38,15 +43,22 @@
                     <a class="nav-link" href="/">Accueil</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/pages/covoiturages.html">Covoiturages</a>
+                    <a class="nav-link" href="/covoiturages">Covoiturages</a>
+                  </li>
+                  <li class="nav-item" data-show = "disconnected">
+                    <!--ce lien ne sera visible que pour les personnes deconnectées-->
+                    <a class="nav-link" href="/signin">Connexion</a>
+                  </li>
+                  <li class="nav-item" data-show="connected">
+                    <!--ce lien ne sera visible que pour les personnes connectées-->
+                    <button class="nav-link" id="signout-btn">Déconnexion</button>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/pages/connexion.html">Connexion</a>
+                    <a class="nav-link" href="/contacts">Contact</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/pages/contacts.html">Contact</a>
+                    <a class="nav-link" href="/visualiser">Mes covoiturages</a>
                   </li>
-                  
                 </ul>
               </div>
             </div>
@@ -64,7 +76,7 @@
 
 
 <main id="main-page">
-    <!-- le contenu de la page sera injecté ici-->
+<!-- le contenu de la page sera injecté ici-->
 </main>
 
 
@@ -73,10 +85,10 @@
     <div class="col-6 col-lg-6" >
 
 
-      <h3 class="" href="/pages/mentionslegales.html">Mentions légales</h3>
+      <h4 class="" href="/pages/mentionslegales.html">Mentions légales</h4>
     </div>    
     <div class="col-6 col-lg-6">
-      <h3>contact@ecoride.fr</h3>
+      <h4>contact@ecoride.fr</h4>
     </div>  
   </div>
 <!--
@@ -104,6 +116,7 @@
   
 </footer>
 
+<script src="js/script.js"></script>
 <script type="module" src="./Router/router.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 

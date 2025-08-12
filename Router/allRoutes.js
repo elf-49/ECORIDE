@@ -4,9 +4,21 @@ export const allRoutes = [
     new Route("/", "Accueil", "/pages/home.html"),
     // ajout d'une autre page html et un fichier js
 
-    new Route("/Covoiturages", "Covoiturages", "/pages/covoiturages.html"),
-    new Route("/Connexion", "Connexion", "/pages/connexion.html"),
-    new Route("/Contact", "Contact", "/pages/contacts.html"),
+    //pages relatives à l'authentification
+    new Route("/signin", "Connexion", "/pages/auth/signin.html","/js/auth/signin.js"),
+    new Route("/signup", "Inscription", "/pages/auth/signup.html", "/js/auth/signup.js"),
+    new Route("/editpassword", "Mot de passe oublié", "/pages/auth/editpassword.html"),
+    new Route("/account", "Mon compte", "/pages/auth/account.html"),
+   
+    //pages relatives aux covoiturages
+    new Route("/covoiturages", "Covoiturages", "/pages/covoiturages/covoiturages.html","/js/covoiturage/covoiturages.js"),
+    new Route("/visualiser", "Info du covoiturages demandé", "/pages/covoiturages/moncovoiturage.html","/js/covoiturage/moncovoiturage.js"),
+    new Route("/covoituragesdisponibles", "Voir les covoiturages disponibles", "/pages/covoiturages/covoituragesdisponibles.html"),
+    new Route("/reserver", "Réserver un Covoiturages", "/pages/covoiturages/reserver.html"),
+
+
+    new Route("/connexion", "Connexion", "/pages/connexion.html"),
+    new Route("/contacts", "Contact", "/pages/contacts.html"),
 
 ];
 //Le titre s'affiche comme ceci : Route.titre - websitename
