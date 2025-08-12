@@ -21,12 +21,12 @@ function checkCredentials() {
         //placer ce token en cookie
         //setToken(token);
 
-        //gerer le role admin
+        //créer un cookie pour le role admin
         setCookie(RoleCookieName , "admin", 2);
        
         //ligne a tester
         //window.location.reload();
-        //window.location.replace("/");
+        window.location.replace("/");
         //redirection vers la page d'accueil
     }
     else {

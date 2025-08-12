@@ -8,8 +8,13 @@
 const tokenCookieName = "accesstoken";
 const RoleCookieName = "role"; 
 //pour le role de l'utilisateur
-const signoutBtn = document.getElementById("signout-btn");
 
+//on récupère le bouton de déconnexion
+const signoutBtn = document.getElementById("signout-btn");
+//le bouton signout-btn est dans index.html
+
+//on écoute le click sur le bouton de déconnexion
+//et on lance la déconnexion avec la fonction signout
 signoutBtn.addEventListener("click", signout);
 
 //recupere le cookie du role
@@ -23,6 +28,7 @@ function signout() {
     //efface le cookie
     eraseCookie(tokenCookieName);
     eraseCookie(RoleCookieName);
+    //ici on rafraichit la page ou on était avant de se déconnecter
     window.location.reload();
 }
 
@@ -112,10 +118,11 @@ function showAndHideElementsForRoles() {
     //cette boucle parcours tous les éléments html qui ont l'attribut data-show
     allElementsToEdit.forEach((element) => {
         switch(element.dataset.show) {
-            //dataset contien les elements html avec l'attribut data-show
+            //dataset contient les elements html avec l'attribut data-show
             case 'disconnected':
                 if(userConnected) {
                     element.classList.add("d-none");
+                    alert("datashow disconnected");
                     //d-none c'est display none une classe BS
                 }
                 break;
