@@ -11972,15 +11972,14 @@ body {
 
 /***************************************************/
 /***************************************************/
-/************ *****pour une carte*******************/
+/***************************************************/
 /***************************************************/
 .ride-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(161, 172, 174);
-  border: solid 2px rgb(238, 238, 238);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 700px;
@@ -12016,6 +12015,13 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  /*
+    align-items: center;
+    display: flex;
+    align-items: flex-end;
+    font-size: 14px;
+    gap: 6px;
+  */
 }
 
 .btn-reserve {
@@ -12044,73 +12050,4 @@ body {
   .ride-right {
     align-items: center;
   }
-}
-/***************************************************/
-/***************************************************/
-/************ *****pour une carte*******************/
-/***************************************************/
-/***************************************************/
-/***************************************************/
-/***pour le carroussel vertical de certe************/
-/***************************************************/
-.carousel-vertical-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(161, 172, 174);
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 900px;
-  margin: 20px auto;
-  font-family: Arial, sans-serif;
-  width: 100%;
-  height: 580px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.carousel-vertical-wrapper {
-  justify-content: center;
-  overflow-y: hidden;
-  height: 100%;
-  width: 80%;
-  scroll-behavior: smooth;
-}
-
-.carousel-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(161, 172, 174);
-  border-radius: 12px;
-  padding: 20px;
-  max-width: 700px;
-  margin: 20px auto;
-  font-family: Arial, sans-serif;
-}
-
-.profil-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 8px;
-}
-
-.carousel-vertical-btn {
-  background-color: rgba(119, 117, 117, 0.7607843137);
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-size: 20px;
-  width: 100%;
-}
-
-/***************************************************/
-/***************************************************/
-/***pour le carroussel vertical de certe************/
-/***************************************************//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main satisfaisant avec une carte.css.map */

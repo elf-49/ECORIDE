@@ -1,5 +1,5 @@
 
-alert("js de la page covoiturages maintenant");
+//alert("js de la page covoiturages maintenant");
 
 //recuperation des différents input
 const inputVilleDepart = document.getElementById("VilleDepartInput");

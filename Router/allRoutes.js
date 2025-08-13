@@ -13,7 +13,7 @@ export const allRoutes = [
     //pages relatives aux covoiturages
     new Route("/covoiturages", "Covoiturages", "/pages/covoiturages/covoiturages.html","/js/covoiturage/covoiturages.js"),
     new Route("/visualiser", "Info du covoiturages demandé", "/pages/covoiturages/moncovoiturage.html","/js/covoiturage/moncovoiturage.js"),
-    new Route("/covoituragesdisponibles", "Voir les covoiturages disponibles", "/pages/covoiturages/covoituragesdisponibles.html"),
+    new Route("/covoituragesdisponibles", "Voir les covoiturages disponibles", "/pages/covoiturages/covoituragesdisponibles.html", "/js/covoiturage/covoituragesdisponibles.js"),
     new Route("/reserver", "Réserver un Covoiturages", "/pages/covoiturages/reserver.html"),
 
 
