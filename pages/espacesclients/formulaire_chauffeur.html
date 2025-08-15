@@ -1,0 +1,110 @@
+<div >
+    <h1 class="text-center">Covoiturages</h1>
+</div>
+<!--
+<div >
+    <h2 id="h6" class="text-center">Ville</h2>
+</div>
+-->
+<section>
+  <div class="d-grid gap-2 col-8 mx-auto">
+    <div class="container">
+      <form id="chauffeurForm">
+
+        <!-- Plaque d'immatriculation -->
+        <div class="mb-3">
+          <label for="PlaqueInput" class="form-label">Plaque d’immatriculation</label>
+          <input type="text" class="form-control" id="PlaqueInput" placeholder="Ex: AB-123-CD" name="Plaque">
+          <div class="invalid-feedback">Champ requis.</div>
+        </div>
+
+        <!-- Date de première immatriculation -->
+        <div class="mb-3">
+          <label for="DateImmatriculationInput" class="form-label">Date de première immatriculation</label>
+          <input type="date" class="form-control" id="DateImmatriculationInput" name="DateImmatriculation">
+          <div class="invalid-feedback">Date invalide.</div>
+        </div>
+
+        <!-- Modèle -->
+        <div class="mb-3">
+          <label for="ModeleInput" class="form-label">Modèle</label>
+          <input type="text" class="form-control" id="ModeleInput" placeholder="Ex: Clio IV" name="Modele">
+          <div class="invalid-feedback">Champ requis.</div>
+        </div>
+
+        <!-- Couleur -->
+        <div class="mb-3">
+          <label for="CouleurInput" class="form-label">Couleur</label>
+          <input type="text" class="form-control" id="CouleurInput" placeholder="Ex: Rouge" name="Couleur">
+          <div class="invalid-feedback">Champ requis.</div>
+        </div>
+
+        <!-- Marque -->
+        <div class="mb-3">
+          <label for="MarqueInput" class="form-label">Marque</label>
+          <input type="text" class="form-control" id="MarqueInput" placeholder="Ex: Renault" name="Marque">
+          <div class="invalid-feedback">Champ requis.</div>
+        </div>
+
+        <!-- Nombre de places disponibles -->
+        <div class="mb-3">
+          <label for="PlacesInput" class="form-label">Nombre de places disponibles</label>
+          <input type="number" class="form-control" id="PlacesInput" name="PlacesDisponibles" min="1">
+          <div class="invalid-feedback">Veuillez entrer un nombre valide.</div>
+        </div>
+
+        <!-- Préférences standards -->
+        <div class="mb-3">
+          <label class="form-label">Préférences</label>
+              
+            <!--CHOIX FUMEUR OU NON-->
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="FumeurOuNon" id="FumeurInput">
+                    <label class="form-check-label" for="fumeurRadio">
+                        Fumeur
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="FumeurOuNon" id="FumeurInput">
+                    <label class="form-check-label" for="nonFumeurRadio">
+                        Non fumeur
+                    </label>
+                </div>
+            </div>
+
+            <!--CHOIX ANIMAL OU NON-->
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="AnimalOuNon" id="AnimalInput">
+                    <label class="form-check-label" for="animalRadio">
+                        Animal accepté
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="AnimalOuNon" id="AnimalInput">
+                    <label class="form-check-label" for="nonAnimalRadio">
+                        Pas d'animal
+                    </label>
+                </div>
+            </div>          
+        </div>
+
+        <!-- Préférences personnalisées -->
+        <div class="mb-3">
+          <label for="AutresPreferencesInput" class="form-label">Autres préférences</label>
+          <input type="text" class="form-control" id="AutresPreferencesInput" placeholder="Ex: Musique autorisée, silence, etc." name="AutresPreferences">
+          <div class="invalid-feedback">Vous pouvez ajouter vos propres préférences.</div>
+        </div>
+
+        <!-- Bouton de soumission -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-dark">Enregistrer le véhicule</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>

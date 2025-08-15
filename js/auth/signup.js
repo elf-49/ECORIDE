@@ -6,8 +6,7 @@
 //implementer le js de la page signup
 
 //recuperation des différents input
-const inputNom = document.getElementById("NomInput");
-const inputPreNom = document.getElementById("PrenomInput");
+const inputPseudo = document.getElementById("PseudoInput");
 const inputMail = document.getElementById("EmailInput");
 const inputPassword = document.getElementById("PasswordInput");
 const inputValidationPassword = document.getElementById("ValidatePasswordInput");
@@ -15,8 +14,7 @@ const btnValidation = document.getElementById("btn-validation-inscription");
 const passwordOk = validateConfirmationPassword(inputPassword, inputValidationPassword);
 
 //On ajoute un event listener sur les input
-inputNom.addEventListener("keyup", validateForm); 
-inputPreNom.addEventListener("keyup", validateForm);
+inputPseudo.addEventListener("keyup", validateForm);
 inputMail.addEventListener("keyup", validateForm);
 inputPassword.addEventListener("keyup", validateForm);
 inputValidationPassword.addEventListener("keyup", validateForm);
@@ -24,15 +22,15 @@ inputValidationPassword.addEventListener("keyup", validateForm);
 //Function permettant de valider tout le formulaire
 //cette methode est appelée chaque fois qu'un input est modifié
 function validateForm(){
-    const nomOk = validateRequired(inputNom);
-    const prenomOk = validateRequired(inputPreNom);
+    const pseudoOk = validateRequired(inputPseudo);
     const mailOk = validateMail(inputMail);
     const passwordOk = validatePassword(inputPassword);
     const passwordConfirmOk = validateConfirmationPassword(inputPassword, inputValidationPassword);
 
     
-    if(nomOk && prenomOk && mailOk && passwordOk && passwordConfirmOk) {
+    if(pseudoOk && mailOk && passwordOk && passwordConfirmOk) {
         btnValidation.disabled = false;
+        window.location.href = "/nouveauclient";
     }
     else{
         btnValidation.disabled = true;

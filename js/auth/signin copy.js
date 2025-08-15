@@ -49,35 +49,36 @@ function checkCredentials() {
         //window.location.replace("/");
         //redirection vers la page d'accueil
     }
+    else {
+        alert("la connexion a échoué, veuillez vérifier vos identifiants");
+        mailInput.classList.add("is-invalid");
+        passwordInput.classList.add("is-invalid");
+
+        // Créer le bouton vous inscrire
+        const bouton = document.createElement("button");
+        bouton.textContent = "Vous incrire";
+        bouton.className = "btn btn-dark";
 
 
-else {
-    //alert("la connexion a échoué, veuillez vérifier vos identifiants");
-    mailInput.classList.add("is-invalid");
-    passwordInput.classList.add("is-invalid");
-
-    // Message d'invitation
-    alert("Bienvenue, pour vous inscrire cliquez sur le bouton vert");
-
-    // Vérifie si le bouton existe déjà
-    const zone = document.getElementById("inscriptionZone");
-    if (!document.getElementById("btnSignup")) {
-        //création du bouton à la volée
-        const btnSignup = document.createElement("button");
-        btnSignup.textContent = "Vous inscrire";
-        btnSignup.id = "btnSignup";
-        //bouton en vert ici il sera plus visible
-        btnSignup.className = "btn btn-success mt-3";
-        btnSignup.type = "button";
-
-        // Action au clic : redirection vers la page d'inscription
-        btnSignup.addEventListener("click", function() {
-            window.location.href = "/signup";
+        bouton.addEventListener("click", function() {
+        alert("Bouton cliqué !");
+        btnSignin.disabled = true;
         });
+
+        // ajouter le bouton à la page
+        alert("ajout du bouton");
+        document.getElementById("zoneBouton").appendChild(bouton);
+    
+        //si c'est un nouveau client
+        //alert("Bienvenue, comme nouveau client, vous bénéfiez maintenant de 20 crédits");
+        //aller vers la page /espaceclients/nouveauclient.html
+        //window.location.replace("/");
+
         
-        //remplissage du bouton dans le html
-        zone.appendChild(btnSignup);
-        
-        };
+        //document.getElementById("id du formulaire").addEventListener("submit", () => {
+        //window.location.href = "/nouveauclient";
+        //alert("effaçage du bouton");
+        //document.getElementById("zoneBouton").removeChild(bouton);
+
     }
 }

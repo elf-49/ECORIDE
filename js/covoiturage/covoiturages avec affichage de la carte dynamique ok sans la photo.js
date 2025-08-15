@@ -75,17 +75,17 @@ card.innerHTML = `
   
   card.innerHTML = `
     <div class="d-flex justify-content-between align-items-center">
-               
-      <div class="ride-left>
-        <img src="/images/avatar conductrice 1.jpg" alt="Avatar" class="avatar">
-        <h3>🚗 ${villeDepart} → ${villeArrivee}</h3>
+      
+    
+    
+      <div>
+        <h4>🚗 ${villeDepart} → ${villeArrivee}</h4>
         <p>📅 ${dateFormat} à ${heureDepart}</p>
         <p>👤 ${nombrePassagers} passager${nombrePassagers > 1 ? 's' : ''}</p>
         <p>🚭 ${covoiturageData.fumeur}</p>
         <p>🐾 ${covoiturageData.animal}</p>
       </div>
-      
-     <div>
+      <div>
         <button class="btn btn-primary">Réserver</button>
       </div>
     </div>

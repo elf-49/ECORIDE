@@ -49,51 +49,20 @@ document.getElementById("covoituragesForm").addEventListener("submit", function 
   const card = document.createElement("div");
   card.className = "ride-card p-3 mb-3 border rounded shadow-sm";
 
-
-
-
-/*
-card.innerHTML = `
-    <div class="ride-left">
-      <img src="/images/avatar conductrice 1.jpg" alt="Avatar" class="avatar">
-      <div class="ride-info">
-        <h3>🚗 ${data.villeDepart} → ${data.villeArrivee}</h3>
-        <p>📅 ${dateFormat} • ${data.heureDepart}</p>
-        <p>💶 25 € par passager</p>
-      </div>
-    </div>
-
-    <div class="ride-right">
-      <p>👤 ${data.nombrePassagers} passager${data.nombrePassagers > 1 ? 's' : ''}</p>
-      <p>🚭 ${data.fumeur}</p>
-      <p>🐾 ${data.animal}</p>
-      <button class="btn-reserve">Réserver</button>
-    </div>
-  `;
-*/
-
-  
   card.innerHTML = `
     <div class="d-flex justify-content-between align-items-center">
-               
-      <div class="ride-left>
-        <img src="/images/avatar conductrice 1.jpg" alt="Avatar" class="avatar">
-        <h3>🚗 ${villeDepart} → ${villeArrivee}</h3>
+      <div>
+        <h4>🚗 ${villeDepart} → ${villeArrivee}</h4>
         <p>📅 ${dateFormat} à ${heureDepart}</p>
         <p>👤 ${nombrePassagers} passager${nombrePassagers > 1 ? 's' : ''}</p>
         <p>🚭 ${covoiturageData.fumeur}</p>
         <p>🐾 ${covoiturageData.animal}</p>
       </div>
-      
-     <div>
+      <div>
         <button class="btn btn-primary">Réserver</button>
       </div>
     </div>
-    
   `;
-
-
-  localStorage.setItem("covoiturage", JSON.stringify(covoiturageData));
 
   document.getElementById("ride-container").innerHTML = ""; // Nettoyer les anciennes cartes
   document.getElementById("ride-container").appendChild(card);

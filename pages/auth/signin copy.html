@@ -6,7 +6,18 @@
 
   <div class="container">
     <form>
-      
+
+      <div class="mb-3">
+        <label for="PseudoInput" class="form-label">Pseudo </label>
+        <input type="pseudo" class="form-control" id="PseudoInput">
+        <div class="invalid-feedback">
+          Veuillez saisir un pseudo.
+        </div>
+        <div class="valid-feedback">
+          Le pseudo est valide.
+        </div>
+      </div>
+
       <div class="mb-3">
         <label for="EmailInput" class="form-label">Email </label>
         <input type="email" class="form-control" id="EmailInput">
@@ -34,11 +45,9 @@
       <button type="button" class="btn btn-dark" id="btnSignin">Connexion</button>
       </div>
 
-      <div class="mb-3">
-      <div id="inscriptionZone" class="text-center mt-3"></div>
-      </div>
-      
-   </form>
+      <div id="zoneBouton"></div>
+
+    </form>
   </div>
 
 

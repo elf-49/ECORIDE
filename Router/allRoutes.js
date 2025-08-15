@@ -16,6 +16,10 @@ export const allRoutes = [
     new Route("/covoituragesdisponibles", "Voir les covoiturages disponibles", "/pages/covoiturages/covoituragesdisponibles.html", "/js/covoiturage/covoituragesdisponibles.js"),
     new Route("/reserver", "Réserver un Covoiturages", "/pages/covoiturages/reserver.html"),
 
+    //pages relatives aux différents espaces
+    new Route("/nouveauclient", "Nouveau client", "/pages/espacesclients/nouveauclient.html","/js/espacesclients/nouveauclient.js"),
+    new Route("/formulairechauffeur", "Formulaire pour un nouveau chauffeur", "/pages/espacesclients/formulaire_chauffeur.html","/js/espacesclients/formulaire_chauffeur.js"),
+    
 
     new Route("/connexion", "Connexion", "/pages/connexion.html"),
     new Route("/contacts", "Contact", "/pages/contacts.html"),
