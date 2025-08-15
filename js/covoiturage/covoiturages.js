@@ -1,49 +1,79 @@
 
-//alert("js de la page covoiturages maintenant");
-
-//recuperation des différents input
-const inputVilleDepart = document.getElementById("VilleDepartInput");
-const inputVilleDarrivee = document.getElementById("VilleDarriveeInput");
-const inputDateDepart = document.getElementById("DateDepartInput");
-const inputHeureDepart = document.getElementById("TimeDepartInput");
-const btnValidation = document.getElementById("btn-rechercher-covoiturage");
-
-//On ajoute un event listener sur les input
-inputVilleDepart.addEventListener("keyup",validateForm);
-inputVilleDarrivee.addEventListener("keyup",validateForm);
-inputDateDepart.addEventListener("keyup",validateForm);
-inputHeureDepart.addEventListener("keyup",validateForm);
+//alert("copilot js stockage des données du form dans localstorage");
 
 
-function validateForm(){
-    const villedepartOk = validateRequired(inputVilleDepart);
-    const villearriveeOk = validateRequired(inputVilleDarrivee);
-    const datedepartOk = validateRequired(inputDateDepart);
-    const heuredepartOk = validateRequired(inputHeureDepart);
+document.getElementById("covoituragesForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Empêche le rechargement de la page
+
+    // Récupération des valeurs du formulaire
+    const villeDepart = document.getElementById("VilleDepartInput").value;
+    const villeArrivee = document.getElementById("VilleDarriveeInput").value;
+    const dateDepart = document.getElementById("DateDepartInput").value;
+    const heureDepart = document.getElementById("TimeDepartInput").value;
+    const nombrePassagers = document.getElementById("NombreDePassagersInput").value;
+    const fumeur = document.querySelector('input[name="FumeurOuNon"]:checked')?.nextElementSibling.textContent.trim() || "Non précisé";
+    const animal = document.querySelector('input[name="AnimalOuNon"]:checked')?.nextElementSibling.textContent.trim() || "Non précisé";
+
+    //test du formulaire complet
+    if (!villeDepart || !villeArrivee || !dateDepart || !heureDepart || !nombrePassagers || !fumeur || !animal) {
+    alert("Veuillez remplir tout le formulaire svp");
+    return;
+  }
     
-       if(villedepartOk && villearriveeOk && datedepartOk && heuredepartOk) {
-        btnValidation.disabled = false;
+    // Création de l'objet covoiturage
+    const covoiturage = {
+        villeDepart,
+        villeArrivee,
+        dateDepart,
+        heureDepart,
+        nombrePassagers,
+        fumeur,
+        animal,
+        prix: 25 // Prix fixe pour l'exemple
+    };
 
-    }
-    else{
-        btnValidation.disabled = true;
-    }
+
+
+    // Stockage dans le localStorage
+    localStorage.setItem("covoiturage", JSON.stringify(covoiturage));
+    // Affichage de la carte
+    afficherCartes();
+});
+
+
+function afficherCartes() {
+    const container = document.getElementById("ride-container");
+    container.innerHTML = ""; // Nettoyer l'affichage précédent
+
+    const ride = JSON.parse(localStorage.getItem("covoiturage"));
+    if (!ride) return;
+
+    const dateObj = new Date(ride.dateDepart);
+    const options = { weekday: 'long', day: 'numeric', month: 'long' };
+    const dateFormatted = dateObj.toLocaleDateString('fr-FR', options);
+
+    const cardHTML = `
+    <div class="ride-card">
+        <div class="ride-left">
+            <img src="/images/avatar conductrice 1.jpg" alt="Avatar" class="avatar">
+            <div class="ride-info">
+                <h3>🚗 ${ride.villeDepart} → ${ride.villeArrivee}</h3>
+                <p>📅 ${dateFormatted} • ${ride.heureDepart}</p>
+                <p>💶 ${ride.prix} € par passager</p>
+            </div>
+        </div>
+        <div class="ride-right">
+            <p>👤 ${ride.nombrePassagers} passager(s)</p>
+            <p>${ride.fumeur === "Fumeur" ? "🚬 Fumeur" : "🚭 Non fumeur"}</p>
+            <p>${ride.animal === "Animal accepté" ? "🐾 Animal accepté" : "🚫🐾 Pas d'animal"}</p>
+            <button class="btn-reserve">Réserver</button>
+        </div>
+    </div>
+    `;
+    container.innerHTML = cardHTML;
 }
 
-function validateRequired(input){
-    if(input.value != ''){
-        //c'est ok
-        input.classList.add("is-valid");
-        input.classList.remove("is-invalid"); 
-        //alert("champ remplit");
-        return true; //on retourne true pour dire que c'est ok
-        }
-    else{
-        //c'est pas ok
-        input.classList.remove("is-valid");
-        input.classList.add("is-invalid");
-        //alert("champ non remplit");
-        return false; //on retourne false pour dire que c'est pas ok
-        }
-}
+// Appel initial au chargement de la page
+window.onload = afficherCartes;
+
 

@@ -1,13 +1,9 @@
-
-
 <div >
     <h1 class="text-center">Covoiturages</h1>
 </div>
 
-
 <section>
 <div class="d-grid gap-2 col-6 mx-auto">
-
     <div class="container">
         <form id="covoituragesForm">
             <div class="mb-3">
@@ -30,7 +26,15 @@
                 <label for="DateDepartInput" class="form-label">Date de départ</label>
                 <input type="date" class="form-control" id="DateDepartInput" placeholder="Date de départ" name="DateDepart">
                 <div class="invalid-feedback">
-                    La date n'est pas au bon format.
+                La date n'est pas au bon format.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="NombreDePassagersInput" class="form-label">Nombre de passagers</label>
+                <input type="number" class="form-control" id="NombreDePassagersInput" placeholder="Nombre de passagers" name="NombrePassagers">
+                <div class="invalid-feedback">
+                Il faut saisir un chiffre ici.
                 </div>
             </div>
 
@@ -38,40 +42,52 @@
                 <label for="TimeDepartInput" class="form-label">Heure de départ</label>
                 <input type="time" class="form-control" id="TimeDepartInput" placeholder="Heure de départ" name="HeureDepart">
                 <div class="invalid-feedback">
-                    L'heure n'est pas au bon format.
+                L'heure n'est pas au bon format.
                 </div>
             </div>
-                
+            
 <!--CHOIX FUMEUR OU NON-->
-            <form>
-                <label>
-                    <input type="radio" name="fumeur" value="option1">
-                    Fumeur
-                </label>
-                <label>
-                    <input type="radio" name="fumeur" value="option2">
-                    Non fumeur
-                </label>
-            </form>
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="FumeurOuNon" id="FumeurInput">
+                    <label class="form-check-label" for="fumeurRadio">
+                        Fumeur
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="FumeurOuNon" id="FumeurInput">
+                    <label class="form-check-label" for="nonFumeurRadio">
+                        Non fumeur
+                    </label>
+                </div>
+            </div>
 
 <!--CHOIX ANIMAL OU NON-->
-            <form>
-                <label>
-                    <input type="radio" name="animal" value="option1">
-                    Animal accepté
-                </label>
-                <label>
-                    <input type="radio" name="animal" value="option2">
-                    Pas d'animal
-                </label>
-            </form>
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="AnimalOuNon" id="AnimalInput">
+                    <label class="form-check-label" for="animalRadio">
+                        Animal accepté
+                    </label>
+                </div>
 
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="AnimalOuNon" id="AnimalInput">
+                    <label class="form-check-label" for="nonAnimalRadio">
+                        Pas d'animal
+                    </label>
+                </div>
             </div>
+            
             <div class="text-center">
-                <button  type="submit" class="btn btn-dark" id="btn-rechercher-covoiturage">Rechercher</button>
+            <button type="submit" class="btn btn-dark" id="btn-rechercher-covoiturage">Rechercher</button>
             </div>
+                       
         </form>
-   
+                
+        <div id="ride-container" class="mt-4"></div>
+        
     </div>
 </div>
 </section>

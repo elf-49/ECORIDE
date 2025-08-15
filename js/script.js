@@ -122,7 +122,7 @@ function showAndHideElementsForRoles() {
             case 'disconnected':
                 if(userConnected) {
                     element.classList.add("d-none");
-                    alert("datashow disconnected");
+                    alert("on affiche pas le menu connexion car on est connecté");
                     //d-none c'est display none une classe BS
                 }
                 break;
