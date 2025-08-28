@@ -1,0 +1,92 @@
+<!-- Bienvenue -->
+<div class="container mt-4">
+  <div class="card mb-4">
+    <div class="card-body d-flex justify-content-between align-items-center">
+      <div>
+        <h4>Bienvenue, <span id="prenom">Jean</span> 👋</h4>
+        <p class="mb-0">Votre rôle actuel : <strong id="role">Chauffeur</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Informations personnelles -->
+  <section class="mb-5">
+    <h5>Informations personnelles</h5>
+    <ul class="list-group">
+      <li class="list-group-item">Nom : Dupont</li>
+      <li class="list-group-item">Prénom : Jean</li>
+      <li class="list-group-item">Email : jean.dupont@email.com</li>
+      <li class="list-group-item">Téléphone : 06 12 34 56 78</li>
+    </ul>
+    <button class="btn btn-outline-primary mt-3">Modifier mes infos</button>
+  </section>
+
+  <!-- Mes véhicules (chauffeur uniquement) -->
+  <section id="vehicules" class="mb-5 d-none">
+    <h5>Mes véhicules</h5>
+    <ul class="list-group mb-3" id="liste-vehicules">
+      <!-- Exemples -->
+      <li class="list-group-item">Renault Clio - AB-123-CD</li>
+    </ul>
+    <button class="btn btn-outline-success mb-2" data-bs-toggle="collapse" data-bs-target="#form-vehicule">Ajouter un véhicule</button>
+    <div class="collapse" id="form-vehicule">
+      <form class="mt-3">
+        <div class="mb-2"><input type="text" class="form-control" placeholder="Plaque"></div>
+        <div class="mb-2"><input type="date" class="form-control" placeholder="Date d’immatriculation"></div>
+        <div class="mb-2"><input type="text" class="form-control" placeholder="Marque / Modèle / Couleur"></div>
+        <div class="mb-2"><input type="number" class="form-control" placeholder="Nombre de places"></div>
+        <div class="mb-2">
+          <label>Préférences :</label>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> Fumeur</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> Animaux</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> Musique</div>
+        </div>
+        <button class="btn btn-primary mt-2">Enregistrer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Mes trajets proposés (chauffeur uniquement) -->
+  <section id="trajets-chauffeur" class="mb-5 d-none">
+    <h5>Mes trajets proposés</h5>
+    <ul class="list-group mb-3">
+      <li class="list-group-item d-flex justify-content-between">
+        Nantes → Angers <span><button class="btn btn-sm btn-warning">Démarrer</button></span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between">
+        Angers → Tours <span><button class="btn btn-sm btn-success">Arrivée à destination</button></span>
+      </li>
+    </ul>
+    <button class="btn btn-outline-primary">Proposer un nouveau trajet</button>
+  </section>
+
+  <!-- Mes trajets en tant que passager -->
+  <section id="trajets-passager" class="mb-5">
+    <h5>Mes trajets en tant que passager</h5>
+    <ul class="list-group mb-3">
+      <li class="list-group-item d-flex justify-content-between">
+        Paris → Lyon <span><button class="btn btn-sm btn-outline-success">Laisser un avis</button></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Mes crédits (chauffeur uniquement) -->
+  <section id="credits" class="mb-5 d-none">
+    <h5>Mes crédits</h5>
+    <p>Solde actuel : <strong>42,00 €</strong></p>
+    <ul class="list-group">
+      <li class="list-group-item">+12,00 € — Trajet Nantes → Angers</li>
+      <li class="list-group-item">+30,00 € — Trajet Angers → Tours</li>
+    </ul>
+  </section>
+
+  <!-- Mes avis -->
+  <section class="mb-5">
+    <h5>Mes avis</h5>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between">
+        ⭐⭐⭐⭐ — "Très bon trajet !" <span><button class="btn btn-sm btn-outline-secondary">Modifier</button> <button class="btn btn-sm btn-outline-danger">Supprimer</button></span>
+      </li>
+    </ul>
+  </section>
+</div>

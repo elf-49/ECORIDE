@@ -5,11 +5,11 @@
 </div>
 
   <div class="container">
-    <form>
+    <form id="signinForm">
       
-      <div class="mb-3">
-        <label for="EmailInput" class="form-label">Email </label>
-        <input type="email" class="form-control" id="EmailInput">
+      <div>
+        <label for="EmailInput" class="form-label-required" >Email *</label>
+        <input type="email" class="form-control" id="EmailInput" name = "email">
         <div class="invalid-feedback">
           Veuillez saisir un email valide.
         </div>
@@ -18,9 +18,9 @@
         </div>
       </div>
 
-      <div class="mb-3">
-        <label for="PasswordInput" class="form-label">Mot de passe</label>
-        <input type="password" class="form-control" id="PasswordInput">
+      <div>
+        <label for="PasswordInput" class="form-label-required" >Mot de passe *</label>
+        <input type="password" class="form-control" id="PasswordInput" name="mdp">
         <a href="/editpassword" >Mot de passe oublié</a>
         <div class="invalid-feedback">
             Le mot de passe doit contenir au moins 8 caractères. Au moins une majuscule, une minuscule, un chiffre et un caractère spécial.
@@ -31,19 +31,12 @@
       </div>
 
       <div class="mb-3">
-      <button type="button" class="btn btn-dark" id="btnSignin">Connexion</button>
-      </div>
-
-      <div class="mb-3">
-      <div id="inscriptionZone" class="text-center mt-3"></div>
+      <button type="button" class="btn btn-dark mt-2" id="btnSignin">Connexion</button>
       </div>
       
    </form>
   </div>
-
-
-
-
+  
   <div class="text-center pt-3">
     <a href="/signup">Vous n’avez pas de compte ? Inscrivez-vous ici !</a><br>
     <a href="/account">Vous avez déjà un compte et souhaitez modifier vos données personnelles ? Cliquer ici !</a>

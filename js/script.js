@@ -9,6 +9,9 @@ const tokenCookieName = "accesstoken";
 const RoleCookieName = "role"; 
 //pour le role de l'utilisateur
 
+//pour le lien du fetch connexio d'un user déja inscrit
+//const apiUrl = "http://127.0.0.1:8000/api/login"
+
 //on récupère le bouton de déconnexion
 const signoutBtn = document.getElementById("signout-btn");
 //le bouton signout-btn est dans index.html
@@ -122,7 +125,7 @@ function showAndHideElementsForRoles() {
             case 'disconnected':
                 if(userConnected) {
                     element.classList.add("d-none");
-                    alert("on affiche pas le menu connexion car on est connecté");
+                    //alert("on affiche pas le menu connexion car on est connecté");
                     //d-none c'est display none une classe BS
                 }
                 break;

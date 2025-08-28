@@ -11860,6 +11860,14 @@ html {
   min-height: 100%;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* Affiche la barre verticale uniquement si besoin */
+  overflow-x: hidden; /* Évite le scroll horizontal */
+}
+
 main {
   margin-bottom: 270px;
 }
@@ -11906,8 +11914,29 @@ p {
   text-align: justify;
 }
 
+.form-control {
+  background-color: #828384;
+  border: solid 2px rgb(238, 238, 238);
+  height: 25px;
+  font-size: small;
+  margin-bottom: 0px;
+}
+
 .form-label {
   color: rgba(119, 117, 117, 0.7607843137);
+  font-size: small;
+  margin-bottom: 0px;
+}
+
+.form-label-required {
+  color: red;
+  font-size: small;
+  margin-bottom: 0px;
+}
+
+.form-check {
+  color: rgba(119, 117, 117, 0.7607843137);
+  font-size: small;
 }
 
 .text-color {

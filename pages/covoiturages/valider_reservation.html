@@ -1,0 +1,27 @@
+<div >
+    <h1 class="text-center">Validation de votre réservation</h1>
+</div>
+
+<div class="d-grid gap-2 col-6 mx-auto">
+    <div class="container">
+        <!--DEJA UTILISATEUR OU PAS ENCORE-->
+        <div class="mb-3">
+            <p>Choisir un statut</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="UtilisateurOuNon" id="UtilisateurInput" checked>
+                <label class="form-check-label" for="UtilisateurInput">
+                    Utilisateur inscrit
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="UtilisateurOuNon" id="VisiteurInput">
+                <label class="form-check-label" for="VisiteurInput">
+                    Nouveau utilisateur (inscription requise)
+                </label>
+            </div>
+            <a class="btn btn-primary" id="btnChoix">Valider votre choix</a>
+        <!--FIN DEJA UTILISATEUR OU PAS ENCORE-->
+        </div>
+    </div>    
+</div>

@@ -1,31 +1,33 @@
-
-
-<div class="text-center text-white">
-        <h1>Mon compte</h1>
+<!--DONNEES PERSONNELLES-->
+<div >
+    <h1 class="text-center">Mon compte</h1>
 </div>
 
-
 <div class="container">
-    <form>
-        <div class="mb-3">
+    <form id="changeForm">
+        <div>
             <label for="NomInput" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="NomInput" placeholder="Votre nom" value="John" name="Nom"> 
+            <input type="text" class="form-control" id="NomInput"  name="Nom"> 
         </div>
-        <div class="mb-3">
+
+        <div>
             <label for="PrenomInput" class="form-label">Prénom</label>
-            <input type="text" class="form-control" id="PrenomInput" placeholder="Votre prénom" value="Doe" name="Prenom"> 
+            <input type="text" class="form-control" id="PrenomInput"  name="Prenom"> 
         </div>
-        <div class="mb-3">
+
+        <div>
           <label for="AdresseInput" class="form-label">Adresse</label>
           <input type="text" class="form-control" id="AdresseInput"  name="Adresse">  
         </div>
-        <div class="mb-3">
+
+        <div>
             <label for="VilleInput" class="form-label">Ville</label>
-            <input type="text" class="form-control" id="VilleInput" value="Paris" name="Ville"> 
+            <input type="text" class="form-control" id="VilleInput"  name="Ville"> 
           </div>
+
         <div class="text-center">
-            <button type="submit" class="btn btn-primary">Modifier vos informations</button>
-            <button type="button" class="btn btn-danger">Supprimer mon compte</button>
+            <button type="submit" class="btn btn-primary" id="btn-validation">Modifier vos informations</button>
+            <button type="button" class="btn btn-danger" id="btn-suppression">Supprimer mon compte</button>
         </div>
     </form>
 

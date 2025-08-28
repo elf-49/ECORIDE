@@ -1,5 +1,5 @@
 
-alert("je suis dans la page mon covoiturage");
+//alert("je suis dans la page mon covoiturage");
 
 // Récupérer l'objet covoiturage dans le loclstorage
 // const covoiturage = JSON.parse(localStorage.getItem("covoiturage"));
@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   card.innerHTML = `
     <div class="ride-left">
-      <img src="/images/avatar conductrice 1.jpg" alt="Avatar" class="avatar">
+      <img src="/images/avatar_conductrice_1.jpg" alt="Avatar" class="avatar">
       <div class="ride-info">
         <h3>🚗 ${data.villeDepart} → ${data.villeArrivee}</h3>
         <p>📅 ${dateFormat} • ${data.heureDepart}</p>

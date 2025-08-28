@@ -1,5 +1,5 @@
 
-alert("script nouveau client");
+//alert("script nouveau client");
 
 document.getElementById("nouveauClientForm").addEventListener("submit", function(e) {
   e.preventDefault();
