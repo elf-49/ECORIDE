@@ -34,6 +34,7 @@ function validateForm(){
     
     if(pseudoOk && mailOk && passwordOk && passwordConfirmOk) {
         btnValidation.disabled = false;
+        alert("votre inscription est enregistrée. Maintenant vous allez être redirigé vers la page de connexion por bénéficier de nos services.");
         window.location.href = "/signin";
     }
     else{

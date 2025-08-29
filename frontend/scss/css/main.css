@@ -11917,7 +11917,7 @@ p {
 .form-control {
   background-color: #828384;
   border: solid 2px rgb(238, 238, 238);
-  height: 25px;
+  height: 28px;
   font-size: small;
   margin-bottom: 0px;
 }
@@ -12142,4 +12142,10 @@ body {
 /***************************************************/
 /***************************************************/
 /***pour le carroussel vertical de certe************/
-/***************************************************//*# sourceMappingURL=main.css.map */
+/***************************************************/
+/***************************************************/
+/************ *****le tri de voiture****************/
+/***************************************************/
+#filtreElectrique {
+  height: calc(2.25rem + 2px);
+}/*# sourceMappingURL=main.css.map */

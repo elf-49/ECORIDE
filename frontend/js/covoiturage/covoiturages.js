@@ -59,7 +59,7 @@ document.getElementById("covoituragesForm").addEventListener("submit", function 
         <p>🐾 ${covoiturageData.animal}</p>
       </div>
       <div>
-        <button class="btn btn-primary">Réserver</button>
+        <button class="btn btn-primary">Chercher</button>
       </div>
     </div>
   `;
@@ -70,7 +70,7 @@ document.getElementById("covoituragesForm").addEventListener("submit", function 
 //bouton reserver
   card.querySelector("button").addEventListener("click", function () {
     //alert("Réserver ce covoiturage");
-    window.location.replace("/valider_reservation");
+    window.location.replace("/liste_des_covoiturages");
   });
 
 });

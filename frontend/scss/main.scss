@@ -76,7 +76,7 @@ p{
 .form-control{
   background-color: #828384;
   border: solid 2px rgb(238, 238, 238);
-  height: 25px;
+  height: 28px;
   font-size: small;
   margin-bottom: 0px
 }
@@ -330,4 +330,14 @@ margin-bottom: auto;      /* Centre verticalement dans le conteneur */
 /***************************************************/
 /***pour le carroussel vertical de certe************/
 /***************************************************/
+
+
+
+/***************************************************/
+/************ *****le tri de voiture****************/
+/***************************************************/
+#filtreElectrique {
+  height: calc(2.25rem + 2px);
+}
+
 

@@ -1,0 +1,52 @@
+
+
+<div class="row mb-3">
+  <div class="col-md-3">
+    <label for="filtrePrix" class="form-label">Prix max (€)</label>
+    <input type="number" class="form-control" id="filtrePrix" placeholder="Ex: 30">
+  </div>
+  <div class="col-md-3">
+    <label for="filtreElectrique" class="form-label">Voiture électrique</label>
+    <select class="form-select" id="filtreElectrique">
+      <option value="">Tous</option>
+      <option value="true">Oui</option>
+      <option value="false">Non</option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <label for="filtreNote" class="form-label">Note minimale</label>
+    <input type="number" step="0.1" min="0" max="5" class="form-control" id="filtreNote" placeholder="Ex: 4.5">
+  </div>
+  <div class="col-md-3">
+    <label for="filtreDuree" class="form-label">Durée max (en heures)</label>
+    <input type="number" class="form-control" id="filtreDuree" placeholder="Ex: 5">
+  </div>
+</div>
+<button class="btn btn-dark mb-3" onclick="appliquerFiltres()">Filtrer</button>
+
+
+
+
+
+
+
+<div class="container mt-4">
+  <h2 class="text-center">Covoiturages disponibles</h2>
+  <table class="table table-striped table-hover" id="tableCovoiturages">
+    <thead>
+      <tr>
+        <th>Départ</th>
+        <th>Arrivée</th>
+        <th>Date</th>
+        <th>Heure</th>
+        <th>Places</th>
+        <th onclick="sortBy('prix')">Prix (€)</th>
+        <th onclick="sortBy('electrique')">Électrique</th>
+        <th onclick="sortBy('noteConducteur')">Note</th>
+        <th onclick="sortBy('duree')">Durée</th>
+        <th>Détail</th>
+      </tr>
+    </thead>
+    <tbody id="tbodyCovoiturages"></tbody>
+  </table>
+</div>
